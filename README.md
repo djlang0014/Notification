@@ -7,12 +7,12 @@ Repository for Notification, a python script that sends Windows notifications an
   
 2. It is recommended to set up a virtual enviornment. This can be done by running:
 ```
-python -m venv ./<venv name>
+python -m venv ./"venv name"
 ```
-where <venv name> should be replaced by the name of your virtual environment.  I recommend naming it either `env` or `venv`.  If you name it anything else, please add the name to the end of the `.gitignore` file.
+where "venv name" should be replaced by the name of your virtual environment.  I recommend naming it either `env` or `venv`.  If you name it anything else, please add the name to the end of the `.gitignore` file.
 After your virtual environment has been created, you can activate it by running
 ```
-. <venv name>/Scripts/activate
+. "venv name"/Scripts/activate
 ```
 
 3. Ensure you have the required dependencies. In order to install the required dependencies, run
