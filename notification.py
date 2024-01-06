@@ -39,11 +39,12 @@ StorageList = Notifications
 
 while True:
     winsound.PlaySound(args.wav_file, winsound.SND_FILENAME)
-    notification.notify(title = "Task Alert", message = StorageList.pop(), timeout = 60)
+    notification.notify(title = "Task Alert", message = StorageList.pop(), timeout = 0)
     
     if not len(StorageList) and args.repeat == "0":
         print("End of input file, program closing")
-        break
+        input.close()
+        sys.exit(0)
     elif not len(StorageList):
         random.shuffle(Notifications)
         StorageList = Notifications
@@ -51,6 +52,6 @@ while True:
 
     time.sleep(60*(int(args.period)))
 
-input.close()
-sys.exit(0)
+
+
 
