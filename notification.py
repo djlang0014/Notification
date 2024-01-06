@@ -35,7 +35,7 @@ while currentLine != "":
     currentLine = input.readline()
 
 random.shuffle(Notifications)
-StorageList = Notifications
+StorageList = Notifications.copy()
 
 while True:
     winsound.PlaySound(args.wav_file, winsound.SND_FILENAME)
@@ -47,7 +47,7 @@ while True:
         sys.exit(0)
     elif not len(StorageList):
         random.shuffle(Notifications)
-        StorageList = Notifications
+        StorageList = Notifications.copy()
         print("Shuffled and starting over")
 
     time.sleep(60*(int(args.period)))
